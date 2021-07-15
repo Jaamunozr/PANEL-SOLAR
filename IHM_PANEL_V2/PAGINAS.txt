@@ -1,0 +1,29 @@
+CÁLCULO DE CONSTANTES DEL TERMISTOR
+https://www.thinksrs.com/downloads/programs/Therm%20Calc/NTCCalibrator/NTCcalculator.htm
+
+FUENTE DE LOS CÁLCULOS
+https://www.instructables.com/Ejemplo-b%C3%A1sico-de-termistor-NTC-y-Arduino/
+
+EJECUTAR TERMINAL
+https://myopenlab.org/inicio/community/preguntas-de-programacion/algunas-dudas/
+
+AUTOEJECUTABLE
+https://myopenlab.org/inicio/autoiniciar-ejecutable-myopenlab-en-raspbian-stretch/
+
+OTROS
+https://gmelectronica.com.ar/termistores-ntc/
+
+
+ADAFRUIT IO
+https://learn.adafruit.com/welcome-to-adafruit-io/client-library
+COMANDOS
+sudo pip3 install adafruit-io
+git clone https://github.com/adafruit/Adafruit_IO_Python.git
+cd Adafruit_IO_Python/examples/
+
+EJEMPLO RAPIDO EN PYTHON
+from Adafruit_IO import *
+aio=Client('Javier_Munoz','aio_srKn30e86TPCNlZV5PDjXxGDXPE9')
+numero=45
+aio.send("tem-panel",numero)
+
