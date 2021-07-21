@@ -1,0 +1,6 @@
+# PANEL-SOLAR
+OBSERVACIONES PANEL SOLAR
+
+
+Para que el programa corra, se debe tener en cuenta lo siguiente: 
+1. 
