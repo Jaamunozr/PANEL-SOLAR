@@ -3,4 +3,12 @@ OBSERVACIONES PANEL SOLAR
 
 
 Para que el programa corra, se debe tener en cuenta lo siguiente: 
-1. 
+1. Se exporta un archivo (Carpeta) por lo general llamado "EJECUTABLE" desde MyOpenLab, el cual se encarga de correr la interfaz de la IHM dando doble click en uno de sus ejecutables, es importante tener en cuenta que debemos dar permisos al archivo para su ejecución.
+2. En la carpeta de "EJECUTABLE", se incluirá el archivo que guarda automaticamente los datos exportados por la IHM de las diferentes medidas. Este archivo tiene como nombre Medidas.txt
+3. Se realiza un ejecutable en python3, el cual se encarga de verificar que la IHM esté corriendo, de no ser así ejecuta una seri de pasos para que se muestre, se valida que la carpeta que contiene los archivos de medidas sea enviada a la base de datos de Adafruit, pidiendo el ususario y llave previamente para direccionarlos, junto con sus variables. El programa tambien verifica que no se tenga un elemento repetido de acuerdo a lo ingresado en la cadena del archivo de Medidas.
+4. El archivo ejecutable de Python se debe correr automaticamente una vez se encienda o reinicie la Raspberry, esto se hace con los siguientes comandos:
+  - sudo nano /etc/xdg/autostart/display.desktop  # Se crea un archivo en la carpeta "autostart" cuyo nombre es display.dektop, este archivo en el que se encargará de ejecutar el programa una vez se encienda la raspberry.
+  - [Desktop Entry]
+    Name=PiCounter
+    Exec=python3 /home/pi/Documents/MyOpenLab_V3_12/PROYECTOS/EJECUTABLE/SINCRONIZACION_MEDIDAS_ADAFRUIT_IO.py && lxterminal
+    #En el archivo se ingresas las anteriores lineas de código, las cuales contienen el nombre del archivo (Name) y lo que se pretende ejecutar junto con su dirección de localización. Se incluye " && lxterminal" con el objetivo de ver en que proceso se encuentra la ejecución del código en python, pero lamnetablemente no es posible visualizar la terminal, se deja para posteriores ajustes.
